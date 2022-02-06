@@ -1,0 +1,61 @@
+Gender,Age years (60 Yrs),Cough Details,Shortness of Breath,Headache,Sore Throat,Body temprature (C),Outcome
+Female,83,Dry,Yes,No,No,37,non COVID-19
+Male,77,Dry,No,No,No,36,non COVID-19
+Female,55,Dry,Yes,No,No,37,non COVID-19
+Male,56,Dry,Yes,No,Yes,38,non COVID-19
+Female,63,Other,Yes,No,No,37,non COVID-19
+Male,63,Dry,Yes,No,No,37,non COVID-19
+Male,64,Dry,Yes,Yes,Yes,38,non COVID-19
+Male,85,Other,No,No,No,37,non COVID-19
+Female,89,Other,Yes,No,No,36,non COVID-19
+Female,36,Other,Yes,Yes,Yes,39,non COVID-19
+Female,71,Other,No,No,No,37,non COVID-19
+Male,36,Dry,Yes,No,Yes,37,non COVID-19
+Male,48,Dry,Yes,No,No,37,non COVID-19
+Female,69,Dry,Yes,No,No,37,non COVID-19
+Female,92,Other,Yes,Yes,Yes,39,non COVID-19
+Male,77,Other,No,No,No,36,non COVID-19
+Female,44,Other,No,No,No,39,non COVID-19
+Male,71,Other,No,No,No,36,non COVID-19
+Male,21,Other,Yes,No,No,38,non COVID-19
+Female,81,Other,No,No,No,37,non COVID-19
+Female,75,Other,No,No,No,37,non COVID-19
+Male,36,Other,Yes,No,No,36,non COVID-19
+Male,79,Dry,Yes,No,No,37,non COVID-19
+Male,57,Other,Yes,No,No,37,non COVID-19
+Male,70,Dry,Yes,No,No,36,non COVID-19
+Male,76,Other,Yes,No,No,37,non COVID-19
+Female,48,Dry,Yes,No,No,37,non COVID-19
+Female,33,Other,No,No,No,37,non COVID-19
+Male,42,Other,Yes,Yes,No,40,non COVID-19
+Male,82,Other,Yes,No,No,37,non COVID-19
+Male,57,Other,Yes,No,No,37,COVID-19
+Female,73,Dry,Yes,No,No,37,COVID-19
+Male,48,Other,Yes,Yes,No,37,COVID-19
+Female,75,Other,Yes,No,No,38,COVID-19
+Male,62,Other,No,No,No,38,COVID-19
+Male,64,Other,Yes,Yes,Yes,39,COVID-19
+Male,56,Dry,Yes,Yes,Yes,38,COVID-19
+Female,33,Other,Yes,Yes,Yes,38,COVID-19
+Female,23,Other,Yes,Yes,No,39,COVID-19
+Male,40,Other,No,No,No,38,COVID-19
+Male,32,Other,Yes,Yes,Yes,37,COVID-19
+Female,37,Other,Yes,No,No,36,COVID-19
+Female,59,Other,No,Yes,No,38,COVID-19
+Male,41,Other,Yes,Yes,No,38,COVID-19
+Female,35,Other,Yes,Yes,Yes,37,COVID-19
+Male,43,Dry,Yes,No,No,35,COVID-19
+Female,32,Other,No,No,No,38,COVID-19
+Female,54,Dry,Yes,Yes,Yes,37,COVID-19
+Male,89,Dry,No,No,No,38,COVID-19
+Female,27,Other,Yes,No,Yes,37,COVID-19
+Male,52,Other,Yes,Yes,No,38,COVID-19
+Female,56,Other,Yes,Yes,No,40,COVID-19
+Female,65,Other,Yes,Yes,No,37,COVID-19
+Female,53,Other,No,No,No,39,COVID-19
+Male,64,Other,Yes,No,No,39,COVID-19
+Female,49,Other,Yes,No,No,37,COVID-19
+Female,20,Other,No,No,No,38,COVID-19
+Male,33,Other,Yes,Yes,Yes,38,COVID-19
+Male,59,Other,No,Yes,Yes,37,COVID-19
+Female,56,Other,Yes,No,No,38,COVID-19
