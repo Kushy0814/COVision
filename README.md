@@ -1,1 +1,1 @@
-# COVision: Convolutional Neural Network for Classification of COVID-19 and Non-Viral Pneumonia Using Chest CT Scans
+# COVision: A Convolutional Neural Network for the Classification of COVID-19 and Non-Viral Pneumonia Using Chest CT Scans
