@@ -1,2 +1,1 @@
-# Covid_Pneumonia_CNN
- 
+# COVision: CNN for Classification of COVID-19 and Non-Viral Pneumonia Using CTs
