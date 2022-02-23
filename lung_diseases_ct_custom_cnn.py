@@ -4,7 +4,7 @@ from tensorflow.keras import datasets, layers, models, applications
 import tensorflow_addons as tfa
 import numpy as np
 import random
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import sys
 print("Imports Completed")
 
