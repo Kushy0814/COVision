@@ -84,6 +84,8 @@ model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Flatten())
 model.add(layers.Dense(256, activation='relu'))
 model.add(layers.Dropout(0.5))
+model.add(layers.Dense(32, activation='relu'))
+model.add(layers.Dropout(0.5))
 model.add(layers.Dense(3, activation='softmax'))
 print("Model Created")
 
