@@ -101,21 +101,21 @@ for i in range(len(testPredictions)):
   testPredictionLabels.append(np.argmax(testPredictions[i]))
 print("Model Tested")
 
-acc = history.history['accuracy']
-loss = history.history['loss']
-epochs_range = range(epochAmount)
-plt.figure(figsize=(8, 8))
-plt.subplot(1, 2, 1)
-plt.plot(epochs_range, acc, label='Training Accuracy')
-plt.xlabel("Epochs")
-plt.ylabel("Accuracy")
-plt.legend(loc='lower right')
-plt.title('Training Accuracy')
-plt.subplot(1, 2, 2)
-plt.plot(epochs_range, loss, label='Training Loss')
-plt.legend(loc='upper right')
-plt.title('Training Loss')
-plt.show()
+# acc = history.history['accuracy']
+# loss = history.history['loss']
+# epochs_range = range(epochAmount)
+# plt.figure(figsize=(8, 8))
+# plt.subplot(1, 2, 1)
+# plt.plot(epochs_range, acc, label='Training Accuracy')
+# plt.xlabel("Epochs")
+# plt.ylabel("Accuracy")
+# plt.legend(loc='lower right')
+# plt.title('Training Accuracy')
+# plt.subplot(1, 2, 2)
+# plt.plot(epochs_range, loss, label='Training Loss')
+# plt.legend(loc='upper right')
+# plt.title('Training Loss')
+# plt.show()
 
 confusion_mtx = tf.math.confusion_matrix(testLabels, testPredictionLabels)
 matrix_string = ""
