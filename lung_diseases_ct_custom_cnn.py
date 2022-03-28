@@ -10,8 +10,8 @@ print("Imports Completed")
 
 epochAmount = 0;
 batchSize = 64;
-trainingSize = 35000;
-testingSize = 15000;
+trainingSize = 2100;
+testingSize = 900;
 if __name__ == "__main__":
     for arg in sys.argv[1:]:
         try:
@@ -43,7 +43,8 @@ def load_labels(label_file):
             labels.append(int(label))
     return paths, labels
 
-directory = '2A_images/'
+import random
+directory = ''
 def process_images(paths, labels, bound):
   arr = random.sample(range(len(paths)), len(paths))
   imageData = []
@@ -54,7 +55,7 @@ def process_images(paths, labels, bound):
     if (imageCount[labels[arr[i]]] < bound):
       imageCount[labels[arr[i]]] += 1
       imgTensor = tf.image.decode_image(tf.io.read_file(directory + paths[arr[i]]))
-      resizedImage = tf.image.resize(imgTensor, [128, 128], method='lanczos3')/255
+      resizedImage = tf.image.resize(imgTensor, [512, 512], method='lanczos3')/255
       imageData.append(resizedImage)
       boundedLabels.append(labels[arr[i]])
     else:
@@ -62,7 +63,6 @@ def process_images(paths, labels, bound):
       if (imageDone[0] and imageDone[1] and imageDone[2]):
         break
   return tf.convert_to_tensor(imageData), boundedLabels
-print("Functions Declared")
 
 trainPaths, trainLabels = load_labels('train_COVIDx_CT-2A.txt')
 testPaths, testLabels = load_labels('test_COVIDx_CT-2A.txt')
@@ -101,21 +101,21 @@ for i in range(len(testPredictions)):
   testPredictionLabels.append(np.argmax(testPredictions[i]))
 print("Model Tested")
 
-# acc = history.history['accuracy']
-# loss = history.history['loss']
-# epochs_range = range(epochAmount)
-# plt.figure(figsize=(8, 8))
-# plt.subplot(1, 2, 1)
-# plt.plot(epochs_range, acc, label='Training Accuracy')
-# plt.xlabel("Epochs")
-# plt.ylabel("Accuracy")
-# plt.legend(loc='lower right')
-# plt.title('Training Accuracy')
-# plt.subplot(1, 2, 2)
-# plt.plot(epochs_range, loss, label='Training Loss')
-# plt.legend(loc='upper right')
-# plt.title('Training Loss')
-# plt.show()
+acc = history.history['accuracy']
+loss = history.history['loss']
+epochs_range = range(epochAmount)
+plt.figure(figsize=(8, 8))
+plt.subplot(1, 2, 1)
+plt.plot(epochs_range, acc, label='Training Accuracy')
+plt.xlabel("Epochs")
+plt.ylabel("Accuracy")
+plt.legend(loc='lower right')
+plt.title('Training Accuracy')
+plt.subplot(1, 2, 2)
+plt.plot(epochs_range, loss, label='Training Loss')
+plt.legend(loc='upper right')
+plt.title('Training Loss')
+plt.show()
 
 confusion_mtx = tf.math.confusion_matrix(testLabels, testPredictionLabels)
 matrix_string = ""
@@ -166,4 +166,3 @@ print("Metrics Calculated")
 
 model.save('ct_model.h5')
 print("Model Saved")
-
