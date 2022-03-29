@@ -9,7 +9,7 @@ import sys
 print("Imports Completed")
 
 epochAmount = 0;
-batchSize = 64;
+batchSize = 32;
 trainingSize = 2100;
 testingSize = 900;
 if __name__ == "__main__":
@@ -55,7 +55,7 @@ def process_images(paths, labels, bound):
     if (imageCount[labels[arr[i]]] < bound):
       imageCount[labels[arr[i]]] += 1
       imgTensor = tf.image.decode_image(tf.io.read_file(directory + paths[arr[i]]))
-      resizedImage = tf.image.resize(imgTensor, [256, 256], method='lanczos3')/255
+      resizedImage = tf.image.resize(imgTensor, [512, 512], method='lanczos3')/255
       imageData.append(resizedImage)
       boundedLabels.append(labels[arr[i]])
     else:
@@ -73,7 +73,7 @@ trainLabels = tf.keras.utils.to_categorical(trainLabels)
 print("Images Processed")
 
 model = models.Sequential()
-model.add(layers.Conv2D(64, (3, 3), activation='relu', input_shape=(256, 256, 1)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu', input_shape=(512, 512, 1)))
 model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Dropout(0.6))
 model.add(layers.Conv2D(64, (3, 3), activation='relu'))
