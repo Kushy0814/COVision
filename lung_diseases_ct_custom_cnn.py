@@ -44,7 +44,7 @@ def load_labels(label_file):
     return paths, labels
 
 import random
-directory = ''
+directory = '2A_images/'
 def process_images(paths, labels, bound):
   arr = random.sample(range(len(paths)), len(paths))
   imageData = []
