@@ -12,6 +12,7 @@ epochAmount = 0;
 batchSize = 32;
 trainingSize = 2100;
 testingSize = 900;
+imageSize = 256;
 if __name__ == "__main__":
     for arg in sys.argv[1:]:
         try:
@@ -27,10 +28,13 @@ if __name__ == "__main__":
             trainingSize = int(float(value)) 
         if name == "--test_size":
             testingSize = int(float(value))
+        if name == "--image_size":
+            imageSize = int(float(value)) 
 print("Epoch Amount: " + str(epochAmount))
 print("Batch Size: " + str(batchSize))
 print("Training Size: " + str(trainingSize))
 print("Testing Size: " + str(testingSize))
+print("Image Size: " + str(imageSize))
 
 imagePathsAll = []
 def load_labels(label_file):
@@ -55,7 +59,7 @@ def process_images(paths, labels, bound):
     if (imageCount[labels[arr[i]]] < bound):
       imageCount[labels[arr[i]]] += 1
       imgTensor = tf.image.decode_image(tf.io.read_file(directory + paths[arr[i]]))
-      resizedImage = tf.image.resize(imgTensor, [512, 512], method='lanczos3')/255
+      resizedImage = tf.image.resize(imgTensor, [imageSize, imageSize], method='lanczos3')/255
       imageData.append(resizedImage)
       boundedLabels.append(labels[arr[i]])
     else:
@@ -73,7 +77,7 @@ trainLabels = tf.keras.utils.to_categorical(trainLabels)
 print("Images Processed")
 
 model = models.Sequential()
-model.add(layers.Conv2D(64, (3, 3), activation='relu', input_shape=(512, 512, 1)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu', input_shape=(imageSize, imageSize, 1)))
 model.add(layers.MaxPooling2D((2, 2)))
 model.add(layers.Dropout(0.6))
 model.add(layers.Conv2D(64, (3, 3), activation='relu'))
