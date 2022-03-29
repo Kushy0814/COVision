@@ -101,6 +101,9 @@ for i in range(len(testPredictions)):
   testPredictionLabels.append(np.argmax(testPredictions[i]))
 print("Model Tested")
 
+history_dict = history.history
+print(history_dict.keys())
+
 acc = history.history['accuracy']
 loss = history.history['loss']
 epochs_range = range(epochAmount)
