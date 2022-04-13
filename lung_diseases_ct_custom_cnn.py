@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# Imports for Tensorflow and Matplotlib
 import tensorflow as tf
 from tensorflow.keras import datasets, layers, models, applications
 import tensorflow_addons as tfa
@@ -8,6 +9,7 @@ import matplotlib.pyplot as plt
 import sys
 print("Imports Completed")
 
+# Command-line arguments for altering training parameters
 epochAmount = 0;
 batchSize = 32;
 trainingSize = 2100;
@@ -36,6 +38,7 @@ print("Training Size: " + str(trainingSize))
 print("Testing Size: " + str(testingSize))
 print("Image Size: " + str(imageSize))
 
+# Process the txt file and strip out the path of each image and its corresponding label
 imagePathsAll = []
 def load_labels(label_file):
     paths, labels = [], []
@@ -47,7 +50,7 @@ def load_labels(label_file):
             labels.append(int(label))
     return paths, labels
 
-import random
+# Take a random sample from the image data and preprocess the images and labels
 directory = '2A_images/'
 def process_images(paths, labels, bound):
   arr = random.sample(range(len(paths)), len(paths))
@@ -76,6 +79,7 @@ testData, testLabels = process_images(testPaths, testLabels, testingSize)
 trainLabels = tf.keras.utils.to_categorical(trainLabels)
 print("Images Processed")
 
+# Instantiate the architecture for the model 
 model = models.Sequential()
 model.add(layers.Conv2D(64, (3, 3), activation='relu', input_shape=(imageSize, imageSize, 1)))
 model.add(layers.MaxPooling2D((2, 2)))
@@ -93,18 +97,22 @@ model.add(layers.Dropout(0.7))
 model.add(layers.Dense(3, activation='softmax'))
 print("Model Created")
 
+# Compile the model with Adam's optimizer and CCE loss
 model.compile(optimizer='adam', loss=tf.keras.losses.CategoricalCrossentropy(), metrics=['accuracy'])
 print("Model Compiled")
 
+# Train the model with the given parameters
 history = model.fit(trainData, trainLabels, batch_size=batchSize, epochs=epochAmount)
 print("Model Trained")
 
+# Test the model and store its predictions
 testPredictions = model.predict(testData)
 testPredictionLabels = []
 for i in range(len(testPredictions)):
   testPredictionLabels.append(np.argmax(testPredictions[i]))
 print("Model Tested")
 
+# Using Matplotlib to make a graph of accuracy vs epoch and loss vs epoch from the training 
 history_dict = history.history
 print(history_dict.keys())
 
@@ -124,6 +132,7 @@ plt.legend(loc='upper right')
 plt.title('Training Loss')
 plt.show()
 
+# Calculation for the metrics of the model 
 confusion_mtx = tf.math.confusion_matrix(testLabels, testPredictionLabels)
 matrix_string = ""
 for row in confusion_mtx:
@@ -157,6 +166,7 @@ auc = metric.result().numpy()
 loss = tf.keras.losses.CategoricalCrossentropy()
 lossCCE = loss(testLabels, testPredictions).numpy()
 
+# Writing a txt file to store the calculated metrics
 metricFile = open("Model_Metrics.txt", "w")
 metricFile.write("Accuracy: " + str(acc))
 metricFile.write("\nCohen's Kappa: " + str(cohen))
@@ -168,8 +178,6 @@ metricFile.write("\nConfusion Matrix: " + matrix_string)
 metricFile.close()
 print("Metrics Calculated")
 
-# from tensorflow.keras.utils import plot_model
-# plot_model(model, to_file='model.png', show_shapes=True, show_layer_names=False, show_layer_activations=True)
-
+# Saving the trained model as an .h5 file
 model.save('ct_model.h5')
 print("Model Saved")
