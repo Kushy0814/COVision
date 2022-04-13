@@ -1,1 +1,1 @@
-# COVision: A Novel Convolutional Neural Network for the Differentiation of COVID-19 From Common Pulmonary Conditions
+# COVision: A Novel CNN for the Differentiation of COVID-19 From Common Pulmonary Conditions
