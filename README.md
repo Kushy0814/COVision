@@ -1,3 +1,11 @@
+https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white
+https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white
+https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white
+https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+https://img.shields.io/badge/Maintained%3F-yes-green.svgr
+https://img.shields.io/website-up-down-green-red/http/monip.org.svg
+[Made In Colab](https://colab.research.google.com/assets/colab-badge.svg)
+
 # COVision: A Novel CNN for the Differentiation of COVID-19 From Common Pulmonary Conditions (ROBO052T)
 
 With the growing amount of COVID-19 cases, especially in developing countries with limited medical resources, it’s essential to accurately diagnose COVID-19 with high specificity. Due to characteristic ground-glass opacities (GGOs), present in both COVID-19 and other acute lung diseases, misdiagnosis occurs often in manual interpretations of CT scans. Current deep learning models can identify COVID-19 but *cannot distinguish* it from other common lung diseases like bacterial pneumonia. COVision is a novel multi-classification convolutional neural network (CNN) that can differentiate COVID-19 from other common lung diseases, with a low false-positivity rate.
