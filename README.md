@@ -4,12 +4,12 @@ With the growing amount of COVID-19 cases, especially in developing countries wi
 
 ## Usage
 COVision is integrated into a [website](https://covision.timmy625.repl.co/) where the user can upload an isolated CT Slice or a CT volume for a patient and then make a selection of the patient’s clinical factors. Once the data is inputted, the user can make a prediction through the ensemble model which outputs the probabilities of the patient having COVID-19, pneumonia, or is healthy. A summary of the diagnosis along with the clinical factors can be downloaded as a .txt file making results easily shareable. 
-![Web capture_15-4-2022_123422_covision timmy625 repl co](https://user-images.githubusercontent.com/30708141/163596688-68514d7d-d7fc-446f-bd97-1fac75b07429.jpeg)
+![Web capture_15-4-2022_123523_covision timmy625 repl co](https://user-images.githubusercontent.com/30708141/163596786-4c101603-2d86-41ee-84c9-c877c115c886.jpeg)
 
 ## Built With
 - [Python in Google Colaboratory](https://colab.research.google.com/)
 - [Jupyter Notebook](https://jupyter.org/)
-- HTML/CSS/JS
+- [HTML/CSS/JS](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ## Data Availability
 CT Scans of COVID-19, pneumonia, and healthy patients were obtained from the [China Consortium of Chest CT Image Investigation (CC-CCII) dataset](http://ncov-ai.big.ac.cn/download?lang=en). Ground truth for the CC-CCII dataset was established via serology tests and confirmed by laboratory findings. Clinical factors for COVID-19, and pneumonia patients were obtained from the [Khorshid COVID Cohort (KCC) study](https://figshare.com/articles/dataset/COVID-19_and_non-COVID-19_pneumonia_Dataset/16682422). Clinical factors for healthy patients were obtained from [Israeli Ministry of Health public dataset](https://data.gov.il/dataset/covid-19/resource/74216e15-f740-4709-adb7-a6fb0955a048).
