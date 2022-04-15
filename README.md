@@ -2,10 +2,13 @@
 
 With the growing amount of COVID-19 cases, especially in developing countries with limited medical resources, it’s essential to accurately diagnose COVID-19 with high specificity. Due to characteristic ground-glass opacities (GGOs), present in both COVID-19 and other acute lung diseases, misdiagnosis occurs often in manual interpretations of CT scans. Current deep learning models can identify COVID-19 but cannot distinguish it from other common lung diseases like bacterial pneumonia. COVision is a novel multi-classification convolutional neural network (CNN) that can differentiate COVID-19 from other common lung diseases, with a low false-positivity rate.
 
-# Usage
+## Usage
 COVision is integrated into a [website](https://covision.timmy625.repl.co/) where the user can upload an isolated CT Slice or a CT volume for a patient and then make a selection of the patient’s clinical factors. Once the data is inputted, the user can make a prediction through the ensemble model which outputs the probabilities of the patient having COVID-19, pneumonia, or is healthy. A summary of the diagnosis along with the clinical factors can be downloaded as a .txt file making results easily shareable. 
 
+## Built With
+- [Python in Google Colaboratory](https://colab.research.google.com/)
+- [Jupyter Notebook](https://jupyter.org/)
+- HTML/CSS/JS
 
-
-
+## Data Availability
 CT Scans of COVID-19, pneumonia, and healthy patients were obtained from the [China Consortium of Chest CT Image Investigation (CC-CCII) dataset](http://ncov-ai.big.ac.cn/download?lang=en). Ground truth for the CC-CCII dataset was established via serology tests and confirmed by laboratory findings. Clinical factors for COVID-19, and pneumonia patients were obtained from the [Khorshid COVID Cohort (KCC) study](https://figshare.com/articles/dataset/COVID-19_and_non-COVID-19_pneumonia_Dataset/16682422). Clinical factors for healthy patients were obtained from [Israeli Ministry of Health public dataset](https://data.gov.il/dataset/covid-19/resource/74216e15-f740-4709-adb7-a6fb0955a048).
