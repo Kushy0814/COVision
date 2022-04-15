@@ -13,6 +13,7 @@ With the growing amount of COVID-19 cases, especially in developing countries wi
 
 ## Usage
 COVision is integrated into a [website](https://covision.timmy625.repl.co/) where the user can upload an isolated CT Slice or a CT volume for a patient and then make a selection of the patient’s clinical factors. Once the data is inputted, the user can make a prediction through the ensemble model which outputs the probabilities of the patient having COVID-19, pneumonia, or is healthy. A summary of the diagnosis along with the clinical factors can be downloaded as a .txt file making results easily shareable. 
+
 ![Web capture_15-4-2022_123523_covision timmy625 repl co](https://user-images.githubusercontent.com/30708141/163596786-4c101603-2d86-41ee-84c9-c877c115c886.jpeg)
 
 ## Built With
