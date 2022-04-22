@@ -29,8 +29,8 @@ CT Scans of COVID-19, pneumonia, and healthy patients were obtained from the [Ch
 - [COVID CF Data](https://github.com/Kushy0814/COVision/tree/main/COVID%20CF%20Data): A folder containing the clinical factor (CFs) data as CSV files used to train our CFNN.
 - [CNN Visualizations](https://github.com/Kushy0814/COVision/blob/main/CNN_Visualizations.py): A program to generate and save heat maps of the kernels of the convolutional filters and generate Grad-CAMs for COVID & pneumonoia CT scans after training COVision on a set of 105,000 CT scans.
 - [CT Scans Generator](https://github.com/Kushy0814/COVision/blob/main/CT_Scans_Generator.ipynb): A program to generate stratified random samples of CT scans from the testing dataset, which were sent to radiologists to be classified for our COVision vs Radiologists observational study.
-- [CT Scans Novel CNN](https://github.com/Kushy0814/COVision/blob/main/CT_Scans_Novel_CNN.py): A novel convolutional neural network trained on augmented CT scans and tested on CT scans using a large set of metrics
-- [Clinical Factors Neural Network (CFNN)](https://github.com/Kushy0814/COVision/blob/main/Clinical_Factors_FCNN.py): A fully connected neural network trained and tested on patient clinical factors (available in COVID CF Data folder as CSV files).
+- [CT Scans Novel CNN](https://github.com/Kushy0814/COVision/blob/main/CT_Scans_Novel_CNN.py): CNN that classifies CT scans as COVID-19, bacterial pneumonia, or healthy.
+- [Clinical Factors Neural Network (CFNN)](https://github.com/Kushy0814/COVision/blob/main/Clinical_Factors_FCNN.py): CFNN that classifies a set of patient's clinical factors as COVID-19, bacterial pneumonia, or healthy.
 .
 
 
