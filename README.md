@@ -30,7 +30,7 @@ CT Scans of COVID-19, pneumonia, and healthy patients were obtained from the [Ch
 - [CNN Visualizations](https://github.com/Kushy0814/COVision/blob/main/CNN_Visualizations.py): A program to generate and save heat maps of the kernels of the convolutional filters and generate Grad-CAMs for COVID & pneumonoia CT scans after training COVision on a set of 105,000 CT scans.
 - [CT Scans Generator](https://github.com/Kushy0814/COVision/blob/main/CT_Scans_Generator.ipynb): A program to generate stratified random samples of CT scans from the testing dataset, which were sent to radiologists to be classified for our COVision vs Radiologists observational study.
 - [CT Scans Novel CNN](https://github.com/Kushy0814/COVision/blob/main/CT_Scans_Novel_CNN.py): CNN that classifies CT scans as COVID-19, bacterial pneumonia, or healthy.
-- [Clinical Factors Neural Network (CFNN)](https://github.com/Kushy0814/COVision/blob/main/Clinical_Factors_FCNN.py): Classifies set of patient CFs as COVID-19, bacterial pneumonia, or healthy.
+- [Clinical Factors Neural Network (CFNN)](https://github.com/Kushy0814/COVision/blob/main/Clinical_Factors_FCNN.py): Classifies set of CFs as COVID-19, bacterial pneumonia, or healthy.
 
 
 
