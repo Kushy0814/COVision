@@ -23,3 +23,11 @@ COVision is integrated into a [website](https://covision.timmy625.repl.co/) wher
 
 ## Data Availability
 CT Scans of COVID-19, pneumonia, and healthy patients were obtained from the [China Consortium of Chest CT Image Investigation (CC-CCII) dataset](http://ncov-ai.big.ac.cn/download?lang=en). Ground truth for the CC-CCII dataset was established via serology tests and confirmed by laboratory findings. Clinical factors for COVID-19, and pneumonia patients were obtained from the [Khorshid COVID Cohort (KCC) study](https://figshare.com/articles/dataset/COVID-19_and_non-COVID-19_pneumonia_Dataset/16682422). Clinical factors for healthy patients were obtained from the [Israeli Ministry of Health](https://data.gov.il/dataset/covid-19/resource/74216e15-f740-4709-adb7-a6fb0955a048). Ground truth for clincials factors was also established via laboratory findings and serology tests.
+
+## File Description
+- Clinical Factors FCNN: A fully connected neural network trained and tested on patient clinical factors (available in COVID CF Data folder as CSV files).
+- CT Scans Novel CNN: A novel convolutional neural network trained on augmented CT scans and tested on CT scans using a large set of metrics.
+- CT Scans Generator: A program to generate stratified random samples of CT scans from the large dataset, which were sent to radiologists to be diagnosed for our COVision vs Radiologists observational study.
+- CNN Visualizations: A program to generate and save heat maps of the kernels of the convolutional filters and generate Grad-CAMs for sets of CT scans.
+- COVID CF Data: A folder containing the clinical factor data used to train our FCNN.
+- CNN Architectures: A folder containing program code for the instantiation of 3 industry architectures (VGG19, InceptionV3, ResNet152) to be compared against COVision after being trained on a smaller set of data.
